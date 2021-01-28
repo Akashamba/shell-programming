@@ -5,27 +5,27 @@
 
 #VARIABLES
 # Uppercase by convention
-# NAME="ghj"
+NAME="ghj"
 
-# echo My name is $NAME
+echo My name is $NAME
 
 # USER INPUT
 # read -p is for prompt
-# read -p "Enter your name: " NAME 
-# echo Hello $NAME!
+read -p "Enter your name: " NAME 
+echo Hello $NAME!
 
-# CONDITIONSALS
+# CONDITIONALS
 
 # IF STATEMENT
-# if [ "$NAME" == "Akash" ]
-# then
-#     echo "Your name is Akash"
-# elif [ "$NAME" == "Jack" ]
-# then 
-#     echo "Your name is Jack"
-# else
-#     echo "Your name is not Akash or Jack"
-# fi
+if [ "$NAME" == "Akash" ]
+then
+    echo "Your name is Akash"
+elif [ "$NAME" == "Jack" ]
+then 
+    echo "Your name is Jack"
+else
+    echo "Your name is not Akash or Jack"
+fi
 
 
 
@@ -40,18 +40,18 @@
 # val1 -le val2 Returns true if val1 is less than or equal to val2
 ########
 
-# NUM1=3
-# NUM2=5
+NUM1=3
+NUM2=5
 
-# if [ "$NUM1" -gt "$NUM2" ]
-# then
-#     echo "$NUM1 is greater than $NUM2"
-# elif [ "$NUM1" -eq "$NUM2" ]
-# then
-#     echo "$NUM1 is equal to $NUM2"
-# else
-#     echo "$NUM1 is less than $NUM2"
-# fi
+if [ "$NUM1" -gt "$NUM2" ]
+then
+    echo "$NUM1 is greater than $NUM2"
+elif [ "$NUM1" -eq "$NUM2" ]
+then
+    echo "$NUM1 is equal to $NUM2"
+else
+    echo "$NUM1 is less than $NUM2"
+fi
 
 
 
@@ -69,73 +69,73 @@
 # -x    True if the file is an executable
 ########
 
-# FILE="test.txt"
-# if [ -e "$FILE" ]
-# then
-#   echo "$FILE exists"
-# else
-#   echo "$FILE does not a exist"
-# fi
+FILE="test.txt"
+if [ -e "$FILE" ]
+then
+  echo "$FILE exists"
+else
+  echo "$FILE does not a exist"
+fi
 
 
 
 # CASE STATEMENT
-# read -p "Are you 21 or over? Y/N " ANSWER
-# case "$ANSWER" in
-#     [yY] | [yY][eE][sS])
-#         echo "You can have a beer :)"
-#         ;;
-#     [nN] | [nN][oO])
-#         echo "Sorry, no drinking"
-#         ;;
-#     *)
-#         echo "Please enter Y/N"
-#         ;;
-# esac
+read -p "Are you 21 or over? Y/N " ANSWER
+case "$ANSWER" in
+    [yY] | [yY][eE][sS])
+        echo "You can have a beer :)"
+        ;;
+    [nN] | [nN][oO])
+        echo "Sorry, no drinking"
+        ;;
+    *)
+        echo "Please enter Y/N"
+        ;;
+esac
 
 
 
 # FOR LOOP
-# NAMES="Brad Kevin Alice Mark"
+NAMES="Brad Kevin Alice Mark"
 
-# for NAME in $NAMES
-# do
-#     echo "Hello $NAME"
-# done
+for NAME in $NAMES
+do
+    echo "Hello $NAME"
+done
 
-# FOR LOOP TO RENAME FILES
-# FILES=$(ls *.txt)
-# NEW="new"
+FOR LOOP TO RENAME FILES
+FILES=$(ls *.txt)
+NEW="new"
 
-# for FILE in $FILES
-# do
-#     echo "Renaming file to new-$FILE"
-#     mv $FILE $NEW-$FILE
-# done
+for FILE in $FILES
+do
+    echo "Renaming file to new-$FILE"
+    mv $FILE $NEW-$FILE
+done
 
-# WHILE LOOP  - READ A FILE LINE BY LINE
-# LINE=1
-# while read -r CURRENT_LINE
-# do
-#     echo "$LINE: $CURRENT_LINE"
-#     ((LINE++))
-# done < "./new-1.txt"
+WHILE LOOP  - READ A FILE LINE BY LINE
+LINE=1
+while read -r CURRENT_LINE
+do
+    echo "$LINE: $CURRENT_LINE"
+    ((LINE++))
+done < "./new-1.txt"
 
 
 
 #FUNCTIONS
-# function sayHello() {
-#     echo "Hello World"
-# }
+function sayHello() {
+    echo "Hello World"
+}
 
-# sayHello
+sayHello
 
 # FUNCTIONS WITH PARAMS
-# function greet() {
-#     echo "Hello, I am $1 and I am $2"
-# }
+function greet() {
+    echo "Hello, I am $1 and I am $2"
+}
 
-# greet "Akash" "20"
+greet "Akash" "20"
 
 
 
